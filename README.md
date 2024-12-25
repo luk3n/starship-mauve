@@ -1,5 +1,5 @@
 # Starship presets
-Some cool hand-made starship presets for your terminal.
+Some cool hand-made starship presets for your terminal.  
 It's pretty minimal. It displays the OS logo, the current directory, the active git branch and its status, and the command duration (there are separated presets without it).
 
 # Previews
