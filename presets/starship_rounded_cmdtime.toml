@@ -1,0 +1,96 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = """
+[](color_light_purple)\
+$os\
+[](bg:color_bg0 fg:color_light_purple)\
+$directory\
+[](bg:color_bg1 fg:color_bg0)\
+$git_branch\
+[](fg:color_bg1)\
+$line_break$character"""
+
+right_format = """
+[](color_bg0)\
+$cmd_duration
+[](fg:color_bg1 bg:color_bg0)\
+[󰚭](fg:color_fg3 bg:color_bg1)\
+[ ](fg:color_bg1)\
+"""
+
+palette = 'dark'
+
+[palettes.dark]
+color_fg0 = '#3b4261'
+color_fg1 = '#c0caf5'
+color_fg2 = '#000000'
+color_fg3 = '#8289a8'
+color_bg0 = '#292e42'
+color_bg1 = '#1a1d2b'
+color_orange = '#ff9e64'
+color_light_purple = '#c5c3e3'
+color_purple = '#9d7cd8'
+color_red = '#ff007c'
+color_yellow = '#ffc777'
+
+[os]
+disabled = false
+style = "bg:color_light_purple fg:color_fg2"
+
+[os.symbols]
+Windows = "󰍲"
+Ubuntu = "󰕈"
+SUSE = ""
+Raspbian = "󰐿"
+Mint = "󰣭"
+Macos = "󰀵"
+Manjaro = ""
+Linux = "󰌽"
+Gentoo = " 󰣨 "
+Fedora = "󰣛"
+Alpine = ""
+Amazon = ""
+Android = ""
+Arch = "💩"
+Artix = "󰣇"
+CentOS = ""
+Debian = "󰣚"
+Redhat = "󱄛"
+RedHatEnterprise = "󱄛"
+
+[username]
+show_always = true
+style_user = "bg:color_bg0 fg:color_fg1"
+style_root = "bg:color_orange fg:color_fg0"
+format = '[ $user ]($style)'
+
+[directory]
+home_symbol = "  ~"
+style = "fg:color_light_purple bg:color_bg0"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[git_branch]
+symbol = ""
+style = "bg:color_bg1"
+format = '[[ $symbol $branch ](fg:color_fg3 bg:color_bg1)]($style)'
+
+[cmd_duration]
+disabled = false
+min_time = 0
+show_milliseconds = true
+style = "bg:color_bg0"
+format = '[$duration ]($style)'
+
+[line_break]
+disabled = false
+
+[character]
+disabled = false
+success_symbol = '[❭](fg:#337e6f)'
+error_symbol = '[❭](fg:color_red)'
+vimcmd_symbol = '[❭](fg:#337e6f)'
+vimcmd_replace_one_symbol = '[❭](fg:color_purple)'
+vimcmd_replace_symbol = '[❭](fg:color_purple)'
+vimcmd_visual_symbol = '[❭](fg:color_yellow)'
