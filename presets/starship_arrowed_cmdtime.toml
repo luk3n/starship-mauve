@@ -7,6 +7,7 @@ $os\
 $directory\
 [](bg:color_bg1 fg:color_bg0)\
 $git_branch\
+$git_status\
 [](fg:color_bg1)\
 $line_break$character"""
 
@@ -75,6 +76,10 @@ truncation_symbol = "…/"
 symbol = ""
 style = "bg:color_bg1"
 format = '[[ $symbol $branch ](fg:color_fg3 bg:color_bg1)]($style)'
+
+[git_status]
+style =	"fg:color_fg3 bg:color_bg1"
+format = '[$all_status$ahead_behind ]($style)'
 
 [cmd_duration]
 disabled = false
